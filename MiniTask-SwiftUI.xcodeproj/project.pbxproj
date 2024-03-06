@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DE5B9DF12B970EE1003CC847 /* Comfortaa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5B9DF02B970EE1003CC847 /* Comfortaa.ttf */; };
 		DE5B9DF92B971982003CC847 /* cText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B9DF82B971982003CC847 /* cText.swift */; };
+		DE8A12B42B98A5BA002ABD93 /* CategoryCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A12B32B98A5BA002ABD93 /* CategoryCards.swift */; };
 		DE8F79D22B97613D00FA270D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F79D12B97613D00FA270D /* Color.swift */; };
 		DEAAADA52B91FE39003C6B43 /* MiniTask_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAAADA42B91FE39003C6B43 /* MiniTask_SwiftUIApp.swift */; };
 		DEAAADA72B91FE39003C6B43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAAADA62B91FE39003C6B43 /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 		DE5B9DF02B970EE1003CC847 /* Comfortaa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa.ttf; sourceTree = "<group>"; };
 		DE5B9DF22B970F49003CC847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DE5B9DF82B971982003CC847 /* cText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cText.swift; sourceTree = "<group>"; };
+		DE8A12B32B98A5BA002ABD93 /* CategoryCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCards.swift; sourceTree = "<group>"; };
 		DE8F79D12B97613D00FA270D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DEAAADA12B91FE39003C6B43 /* MiniTask-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniTask-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAAADA42B91FE39003C6B43 /* MiniTask_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniTask_SwiftUIApp.swift; sourceTree = "<group>"; };
@@ -64,6 +66,22 @@
 			path = CustomSwiftUIViews;
 			sourceTree = "<group>";
 		};
+		DE8A12B12B98A589002ABD93 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A12B22B98A592002ABD93 /* Subviews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE8A12B22B98A592002ABD93 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A12B32B98A5BA002ABD93 /* CategoryCards.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		DEAAAD982B91FE39003C6B43 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +101,7 @@
 		DEAAADA32B91FE39003C6B43 /* MiniTask-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DE8A12B12B98A589002ABD93 /* Views */,
 				DE5B9DF32B97183B003CC847 /* Utilities */,
 				DE5B9DF22B970F49003CC847 /* Info.plist */,
 				DE5B9DEF2B970EB0003CC847 /* Font */,
@@ -178,6 +197,7 @@
 				DE8F79D22B97613D00FA270D /* Color.swift in Sources */,
 				DEAAADA52B91FE39003C6B43 /* MiniTask_SwiftUIApp.swift in Sources */,
 				DE5B9DF92B971982003CC847 /* cText.swift in Sources */,
+				DE8A12B42B98A5BA002ABD93 /* CategoryCards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

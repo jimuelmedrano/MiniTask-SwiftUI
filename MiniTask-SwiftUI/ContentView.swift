@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
         ZStack{
@@ -61,10 +62,48 @@ struct ContentView: View {
                         Spacer()
                     }
                 }
+                .padding(.bottom, 30)
+                HStack {
+                    cText(text: "Today's Tasks", size: 18, weight: "bold")
+                    Spacer()
+                }
+                .padding(.bottom)
+                ScrollView(.vertical,showsIndicators: false) {
+                    VStack{
+                        TaskCard(checkboxIcon: "checkmark.square.fill", 
+                                 task: "Update MiniTask Design",
+                                 time: "08:00am - 09:00am",
+                                 category: "Work")
+                        TaskCard(checkboxIcon: "square",
+                                 task: "Buy Snacks",
+                                 category: "Shopping")
+                        TaskCard(checkboxIcon: "square",
+                                 task: "Clean my room",
+                                 time: "09:00pm - 11:pm",
+                                 category: "Home")
+                        TaskCard(checkboxIcon: "square",
+                                 task: "Clean my room",
+                                 time: "09:00pm - 11:pm",
+                                 category: "Home")
+                        TaskCard(checkboxIcon: "square",
+                                 task: "Clean my room",
+                                 time: "09:00pm - 11:pm",
+                                 category: "Home")
+                    }
+                }
+                .frame(maxHeight: 270)
                 Spacer()
-                
+                Button {
+                    print("add new task")
+                } label: {
+                    cText(text: "+ Add new task", size: 18, weight: "bold")
+                        .frame(maxWidth: .infinity, maxHeight: 60)
+                        .foregroundColor(.white)
+                }
+                .background(Color("foreground"))
+                .cornerRadius(20)
             }
-            .padding(30)
+            .padding(.init(top: 30, leading: 30, bottom: 10, trailing: 30))
         }
         
     }
@@ -75,23 +114,46 @@ struct ContentView: View {
 }
 
 
-struct CategoryCards: View {
-    var iconName: String
-    var categoryName: String
+
+
+struct TaskCard: View {
+    var checkboxIcon: String
+    var task: String
+    var time: String?
+    var category: String
     var body: some View {
-        VStack {
-            ZStack{
-                Color("lightGray")
-                Image(systemName: iconName)
+        ZStack{
+            Color("lightGray")
+            HStack {
+                Image(systemName: checkboxIcon)
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 30.0, height: 30.0)
+                    .frame(width: 25.0, height: 25.0)
+                    .padding(.trailing)
+                    .aspectRatio(contentMode: .fit)
+                    .onTapGesture {
+                        print("Task Checked!")}
+                VStack {
+                    HStack {
+                        cText(text: task, size: 14)
+                            .padding(.bottom, 2)
+                        Spacer()
+                    }
+                    HStack() {
+                        if(time != nil){
+                            cText(text: time!, size: 12, weight: "light")
+                        }
+                        cText(text: category, size: 12, weight: "light")
+                        Spacer()
+                    }
+                }
+                Spacer()
+                
             }
-            .frame(width: 70,height: 70)
-            .cornerRadius(20)
-            .padding(.bottom, 3)
-            cText(text: categoryName, size: 14, weight: "bold")
+            .padding(.horizontal, 25)
+            
         }
-        .padding(.leading, 5)
+        .frame(height: 80)
+        .cornerRadius(20)
+        .padding(.bottom, 3)
     }
 }
