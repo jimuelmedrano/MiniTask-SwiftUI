@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
         ZStack{
             Color("background")
@@ -54,11 +54,11 @@ struct ContentView: View {
                 .padding(.bottom)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack{
-                        CategoryCards(iconName: "briefcase", categoryName: "Work")
-                        CategoryCards(iconName: "house", categoryName: "Home")
-                        CategoryCards(iconName: "bag", categoryName: "Shopping")
-                        CategoryCards(iconName: "book", categoryName: "School")
-                        CategoryCards(iconName: "briefcase", categoryName: "Work")
+                        CategoryCard(iconName: "briefcase", categoryName: "Work")
+                        CategoryCard(iconName: "house", categoryName: "Home")
+                        CategoryCard(iconName: "bag", categoryName: "Shopping")
+                        CategoryCard(iconName: "book", categoryName: "School")
+                        CategoryCard(iconName: "briefcase", categoryName: "Work")
                         Spacer()
                     }
                 }
@@ -70,25 +70,20 @@ struct ContentView: View {
                 .padding(.bottom)
                 ScrollView(.vertical,showsIndicators: false) {
                     VStack{
-                        TaskCard(checkboxIcon: "checkmark.square.fill", 
-                                 task: "Update MiniTask Design",
+                        TaskCard(task: "Update MiniTask Design",
                                  time: "08:00am - 09:00am",
-                                 category: "Work")
-                        TaskCard(checkboxIcon: "square",
-                                 task: "Buy Snacks",
-                                 category: "Shopping")
-                        TaskCard(checkboxIcon: "square",
-                                 task: "Clean my room",
+                                 category: "Shopping", isChecked: true)
+                        TaskCard(task: "Buy Snacks",
+                                 category: "Shopping", isChecked: true)
+                        TaskCard(task: "Clean my room",
                                  time: "09:00pm - 11:pm",
-                                 category: "Home")
-                        TaskCard(checkboxIcon: "square",
-                                 task: "Clean my room",
+                                 category: "Home", isChecked: false)
+                        TaskCard(task: "Clean my room",
                                  time: "09:00pm - 11:pm",
-                                 category: "Home")
-                        TaskCard(checkboxIcon: "square",
-                                 task: "Clean my room",
+                                 category: "Home", isChecked: false)
+                        TaskCard(task: "Clean my room",
                                  time: "09:00pm - 11:pm",
-                                 category: "Home")
+                                 category: "Home", isChecked: true)
                     }
                 }
                 .frame(maxHeight: 270)
@@ -110,50 +105,10 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    HomeView()
 }
 
 
 
 
-struct TaskCard: View {
-    var checkboxIcon: String
-    var task: String
-    var time: String?
-    var category: String
-    var body: some View {
-        ZStack{
-            Color("lightGray")
-            HStack {
-                Image(systemName: checkboxIcon)
-                    .resizable()
-                    .frame(width: 25.0, height: 25.0)
-                    .padding(.trailing)
-                    .aspectRatio(contentMode: .fit)
-                    .onTapGesture {
-                        print("Task Checked!")}
-                VStack {
-                    HStack {
-                        cText(text: task, size: 14)
-                            .padding(.bottom, 2)
-                        Spacer()
-                    }
-                    HStack() {
-                        if(time != nil){
-                            cText(text: time!, size: 12, weight: "light")
-                        }
-                        cText(text: category, size: 12, weight: "light")
-                        Spacer()
-                    }
-                }
-                Spacer()
-                
-            }
-            .padding(.horizontal, 25)
-            
-        }
-        .frame(height: 80)
-        .cornerRadius(20)
-        .padding(.bottom, 3)
-    }
-}
+

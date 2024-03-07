@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CategoryCards: View {
+struct CategoryCard: View {
     var iconName: String
     var categoryName: String
     var body: some View {
@@ -30,5 +30,5 @@ struct CategoryCards: View {
 }
 
 #Preview {
-    CategoryCards(iconName: "bag", categoryName: "Shopping")
+    CategoryCard(iconName: "bag", categoryName: "Shopping")
 }
