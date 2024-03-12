@@ -93,7 +93,7 @@ struct AddTaskView: View {
                             Button{
                                 isTimepickerPresented = true
                             } label: {
-                                cText(text: isTimeValueSelected ?  "\(date.formatted(.dateTime.day().month().year()))" : "Select Time", size: 18)
+                                cText(text: isTimeValueSelected ?  "\(time.formatted(.dateTime.hour().minute()))" : "Select Time", size: 18)
                                     .if(isTimeValueSelected, transform: { View in
                                         View.foregroundStyle(Color(UIColor.label))
                                     })
