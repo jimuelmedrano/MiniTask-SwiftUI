@@ -10,8 +10,9 @@ import SwiftUI
 
 struct TaskCard: View {
     var task: String
-    var time: String?
-    var category: String
+    var taskDate: String?
+    var taskTime: String?
+    //var category: String?
     @State var isChecked: Bool
     var body: some View {
         ZStack{
@@ -19,9 +20,9 @@ struct TaskCard: View {
             HStack {
                 Image(systemName: isChecked ? "checkmark.square.fill" : "square")
                     .resizable()
+                    .aspectRatio(contentMode: .fill)
                     .frame(width: 25.0, height: 25.0)
                     .padding(.trailing)
-                    .aspectRatio(contentMode: .fit)
                     .onTapGesture {
                         print("Task Checked!")
                         if(isChecked){
@@ -38,23 +39,29 @@ struct TaskCard: View {
                                 View.strikethrough()
                             }
                         Spacer()
+                        
                     }
                     HStack() {
-                        if(time != nil){
-                            cText(text: time!, size: 12, weight: "light")
+                        if(taskDate != nil){
+                            cText(text: taskDate!, size: 12, weight: "light")
                                 .if(isChecked) { View in
                                     View.strikethrough()
                                 }
                         }
-                        cText(text: category, size: 12, weight: "light")
-                            .if(isChecked) { View in
-                                View.strikethrough()
-                            }
+                        if(taskTime != nil){
+                            cText(text: taskTime!, size: 12, weight: "light")
+                                .if(isChecked) { View in
+                                    View.strikethrough()
+                                }
+                        }
+//                        cText(text: category, size: 12, weight: "light")
+//                            .if(isChecked) { View in
+//                                View.strikethrough()
+//                            }
                         Spacer()
                     }
                 }
                 Spacer()
-                
             }
             .padding(.horizontal, 25)
             
@@ -66,7 +73,8 @@ struct TaskCard: View {
 }
 
 #Preview {
-    TaskCard(task: "Update MiniTask Design",
-             time: "08:00am - 09:00am",
-             category: "Shopping", isChecked: true)
+    TaskCard(task: "Update MiniTask Design Update MiniTask Design Update MiniTask Design Update MiniTask Design Update MiniTask Design Update MiniTask Design ",
+             taskDate: "Mar 06, 2024",
+             taskTime: "08:00am - 09:00am",
+             isChecked: false)
 }

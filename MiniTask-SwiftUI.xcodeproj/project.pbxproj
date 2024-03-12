@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE45AE1B2B9F31C300577BEA /* cMenuPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45AE1A2B9F31C300577BEA /* cMenuPicker.swift */; };
+		DE45AE1E2B9F40C000577BEA /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45AE1D2B9F40C000577BEA /* CategoryModel.swift */; };
+		DE4E3D012B9B5752008C3395 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E3D002B9B5752008C3395 /* AddTaskView.swift */; };
 		DE5B9DF12B970EE1003CC847 /* Comfortaa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5B9DF02B970EE1003CC847 /* Comfortaa.ttf */; };
 		DE5B9DF92B971982003CC847 /* cText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B9DF82B971982003CC847 /* cText.swift */; };
 		DE862B252B99F87200B04542 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE862B242B99F87200B04542 /* CategoryCard.swift */; };
 		DE8F79D22B97613D00FA270D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F79D12B97613D00FA270D /* Color.swift */; };
+		DEA2130E2BA09ABA0067DE2E /* cDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA2130D2BA09ABA0067DE2E /* cDatePicker.swift */; };
+		DEA213102BA09F3A0067DE2E /* cTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA2130F2BA09F3A0067DE2E /* cTimePicker.swift */; };
 		DEAAADA52B91FE39003C6B43 /* MiniTask_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAAADA42B91FE39003C6B43 /* MiniTask_SwiftUIApp.swift */; };
 		DEAAADA72B91FE39003C6B43 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAAADA62B91FE39003C6B43 /* HomeView.swift */; };
 		DEAAADA92B91FE3B003C6B43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAAADA82B91FE3B003C6B43 /* Assets.xcassets */; };
@@ -20,11 +25,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE45AE1A2B9F31C300577BEA /* cMenuPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cMenuPicker.swift; sourceTree = "<group>"; };
+		DE45AE1D2B9F40C000577BEA /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		DE4E3D002B9B5752008C3395 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		DE5B9DF02B970EE1003CC847 /* Comfortaa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa.ttf; sourceTree = "<group>"; };
 		DE5B9DF22B970F49003CC847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DE5B9DF82B971982003CC847 /* cText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cText.swift; sourceTree = "<group>"; };
 		DE862B242B99F87200B04542 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		DE8F79D12B97613D00FA270D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		DEA2130D2BA09ABA0067DE2E /* cDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cDatePicker.swift; sourceTree = "<group>"; };
+		DEA2130F2BA09F3A0067DE2E /* cTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cTimePicker.swift; sourceTree = "<group>"; };
 		DEAAADA12B91FE39003C6B43 /* MiniTask-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniTask-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAAADA42B91FE39003C6B43 /* MiniTask_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniTask_SwiftUIApp.swift; sourceTree = "<group>"; };
 		DEAAADA62B91FE39003C6B43 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -45,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE45AE1C2B9F40A200577BEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE45AE1D2B9F40C000577BEA /* CategoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DE5B9DEF2B970EB0003CC847 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				DE5B9DF82B971982003CC847 /* cText.swift */,
+				DE45AE1A2B9F31C300577BEA /* cMenuPicker.swift */,
+				DEA2130D2BA09ABA0067DE2E /* cDatePicker.swift */,
+				DEA2130F2BA09F3A0067DE2E /* cTimePicker.swift */,
 			);
 			path = CustomSwiftUIViews;
 			sourceTree = "<group>";
@@ -75,6 +96,8 @@
 			children = (
 				DEFA1D272B99EB8600D13261 /* Extensions */,
 				DE8A12B22B98A592002ABD93 /* Subviews */,
+				DE4E3D002B9B5752008C3395 /* AddTaskView.swift */,
+				DEAAADA62B91FE39003C6B43 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,12 +130,12 @@
 		DEAAADA32B91FE39003C6B43 /* MiniTask-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DE45AE1C2B9F40A200577BEA /* Model */,
 				DE8A12B12B98A589002ABD93 /* Views */,
 				DE5B9DF32B97183B003CC847 /* Utilities */,
 				DE5B9DF22B970F49003CC847 /* Info.plist */,
 				DE5B9DEF2B970EB0003CC847 /* Font */,
 				DEAAADA42B91FE39003C6B43 /* MiniTask_SwiftUIApp.swift */,
-				DEAAADA62B91FE39003C6B43 /* HomeView.swift */,
 				DEAAADA82B91FE3B003C6B43 /* Assets.xcassets */,
 				DEAAADAA2B91FE3B003C6B43 /* Preview Content */,
 			);
@@ -209,10 +232,15 @@
 			files = (
 				DEFA1D2B2B99F4A500D13261 /* TaskCard.swift in Sources */,
 				DEAAADA72B91FE39003C6B43 /* HomeView.swift in Sources */,
+				DEA2130E2BA09ABA0067DE2E /* cDatePicker.swift in Sources */,
 				DE8F79D22B97613D00FA270D /* Color.swift in Sources */,
+				DE45AE1E2B9F40C000577BEA /* CategoryModel.swift in Sources */,
+				DE4E3D012B9B5752008C3395 /* AddTaskView.swift in Sources */,
 				DE862B252B99F87200B04542 /* CategoryCard.swift in Sources */,
 				DEAAADA52B91FE39003C6B43 /* MiniTask_SwiftUIApp.swift in Sources */,
+				DEA213102BA09F3A0067DE2E /* cTimePicker.swift in Sources */,
 				DE5B9DF92B971982003CC847 /* cText.swift in Sources */,
+				DE45AE1B2B9F31C300577BEA /* cMenuPicker.swift in Sources */,
 				DEFA1D292B99EBB300D13261 /* ViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +379,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniTask-SwiftUI/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MiniTask;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -385,6 +414,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MiniTask-SwiftUI/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MiniTask;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

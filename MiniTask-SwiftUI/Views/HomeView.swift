@@ -13,7 +13,7 @@ struct HomeView: View {
         ZStack{
             Color("background")
                 .ignoresSafeArea()
-            VStack{
+            VStack(alignment: .leading){
                 HStack {
                     cText(text: "MiniTask", size: 24)
                     Spacer()
@@ -32,13 +32,10 @@ struct HomeView: View {
                             }
                 }
                 .padding(.bottom, 30)
-                HStack{
-                    VStack(alignment: .leading){
-                        cText(text: "Hey there, Renzo", size: 24,weight: "black")
-                            .padding(.bottom, 5)
-                        cText(text: "Organize your tasks today", size: 14,weight: "light")
-                    }
-                    Spacer()
+                VStack(alignment: .leading){
+                    cText(text: "Hey there, Renzo", size: 24,weight: "black")
+                        .padding(.bottom, 5)
+                    cText(text: "Organize your tasks today", size: 14,weight: "light")
                 }
                 .padding(.bottom,30)
                 HStack{
@@ -63,30 +60,24 @@ struct HomeView: View {
                     }
                 }
                 .padding(.bottom, 30)
-                HStack {
-                    cText(text: "Today's Tasks", size: 18, weight: "bold")
-                    Spacer()
-                }
-                .padding(.bottom)
+                cText(text: "Today's Tasks", size: 18, weight: "bold")
+                .padding(.bottom, 5)
                 ScrollView(.vertical,showsIndicators: false) {
                     VStack{
                         TaskCard(task: "Update MiniTask Design",
-                                 time: "08:00am - 09:00am",
-                                 category: "Shopping", isChecked: true)
+                                 taskDate: "Mar 06, 2024",
+                                 taskTime: "08:00am",
+                                 isChecked: false)
                         TaskCard(task: "Buy Snacks",
-                                 category: "Shopping", isChecked: true)
+                                 isChecked: false)
                         TaskCard(task: "Clean my room",
-                                 time: "09:00pm - 11:pm",
-                                 category: "Home", isChecked: false)
-                        TaskCard(task: "Clean my room",
-                                 time: "09:00pm - 11:pm",
-                                 category: "Home", isChecked: false)
-                        TaskCard(task: "Clean my room",
-                                 time: "09:00pm - 11:pm",
-                                 category: "Home", isChecked: true)
+                                 taskTime: "09:00pm",
+                                 isChecked: false)
+                        TaskCard(task: "Clean my desk",
+                                 taskTime: "09:00pm ",
+                                 isChecked: true)
                     }
                 }
-                .frame(maxHeight: 270)
                 Spacer()
                 Button {
                     print("add new task")
@@ -97,6 +88,7 @@ struct HomeView: View {
                 }
                 .background(Color("foreground"))
                 .cornerRadius(20)
+                .padding(.top)
             }
             .padding(.init(top: 30, leading: 30, bottom: 10, trailing: 30))
         }
