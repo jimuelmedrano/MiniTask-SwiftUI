@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct cMenuPicker: View {
-    @State private var selection = ""
+    @State var selection: String = ""
     var pickerName: String
     var options: [String]
     var body: some View {
@@ -22,7 +22,7 @@ struct cMenuPicker: View {
             }
         } label: {
             HStack {
-                cText(text: selection == "" ? "Select \(pickerName)" : selection, size: 16, weight: "light")
+                cText(text: selection == "" ? "Select \(pickerName)" : selection, size: 16)
                     .if(selection == "" , transform: { View in
                         View.foregroundColor(Color(UIColor.placeholderText))
                     })
