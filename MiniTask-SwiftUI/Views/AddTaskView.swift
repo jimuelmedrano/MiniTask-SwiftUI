@@ -85,6 +85,7 @@ struct AddTaskView: View {
                             .sheet(isPresented: $isDatepickerPresented) {
                                 cDatePicker(selectDate: $date, isValueSelected: $isDateValueSelected)
                                     .presentationDetents([.fraction(0.8)])
+                                    .presentationCornerRadius(20)
                             }
                         }
                         .frame(height: 50)
@@ -109,6 +110,7 @@ struct AddTaskView: View {
                             .sheet(isPresented: $isTimepickerPresented) {
                                 cTimePicker(selectDate: $time, isValueSelected: $isTimeValueSelected)
                                     .presentationDetents([.medium])
+                                    .presentationCornerRadius(20)
                             }
                         }
                         .frame(height: 50)
