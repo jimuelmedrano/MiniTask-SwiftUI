@@ -60,6 +60,14 @@ struct HomeView: View {
                             Spacer()
                         }
                     }
+                    .mask {
+                        LinearGradient(stops: [
+                            Gradient.Stop(color: .clear, location: 0.00),
+                            Gradient.Stop(color: .black, location: 0.02),
+                            Gradient.Stop(color: .black, location: 0.97),
+                            Gradient.Stop(color: .clear, location: 1),
+                        ], startPoint: .leading, endPoint: .trailing)
+                      }
                     .padding(.bottom, 30)
                     cText(text: "Today's Tasks", size: 18, weight: "bold")
                         .padding(.bottom, 5)
@@ -77,8 +85,17 @@ struct HomeView: View {
                             TaskCard(task: "Clean my desk",
                                      taskTime: "09:00pm ",
                                      isChecked: true)
+                            
                         }
                     }
+                    .mask {
+                        LinearGradient(stops: [
+                            Gradient.Stop(color: .clear, location: 0.00),
+                            Gradient.Stop(color: .black, location: 0.02),
+                            Gradient.Stop(color: .black, location: 0.95),
+                            Gradient.Stop(color: .clear, location: 1),
+                        ], startPoint: .top, endPoint: .bottom)
+                      }
                     Spacer()
                     
                     NavigationLink {
@@ -92,7 +109,6 @@ struct HomeView: View {
                         }
                         .frame(height: 60)
                         .cornerRadius(20)
-                        .padding(.top)
                     }
                 }
                 .padding(.init(top: 30, leading: 30, bottom: 10, trailing: 30))

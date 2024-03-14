@@ -30,12 +30,12 @@ struct AddTaskView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 25.0, height: 25.0)
-                    .padding(.bottom, 30)
+                    .padding(.bottom)
                     .onTapGesture {
                         self.presentationMode.wrappedValue.dismiss()
                     }
                 cText(text: "Add Task", size: 26, weight: "black")
-                    .padding(.bottom, 25)
+                    .padding(.bottom)
                 
                 //MARK: - Task Label
                 cText(text: "Task Label", size: 18, weight: "black")
@@ -48,7 +48,7 @@ struct AddTaskView: View {
                 }
                 .frame(height: 50)
                 .cornerRadius(15)
-                .padding(.bottom, 25)
+                .padding(.bottom)
                 
                 // MARK: - Category
                 cText(text: "Category", size: 18, weight: "black")
@@ -60,7 +60,7 @@ struct AddTaskView: View {
                 }
                 .frame(height: 50)
                 .cornerRadius(15)
-                .padding(.bottom, 25)
+                .padding(.bottom)
                 
                 // MARK: - Date and Time
                 HStack{
@@ -118,7 +118,7 @@ struct AddTaskView: View {
                     }
                     Spacer()
                 }
-                .padding(.bottom, 25)
+                .padding(.bottom)
                 
                 //MARK: - Repeat Options
                 cText(text: "Repeat", size: 18, weight: "black")
@@ -130,17 +130,13 @@ struct AddTaskView: View {
                 }
                 .frame(height: 50)
                 .cornerRadius(15)
-                .padding(.bottom, 25)
-                
                 Spacer()
-                Button {
-                    print("add new task")
-                } label: {
+                ZStack{
+                    Color("foreground")
                     cText(text: "Create new task", size: 18, weight: "bold")
-                        .frame(maxWidth: .infinity, maxHeight: 60)
                         .foregroundColor(.white)
                 }
-                .background(Color("foreground"))
+                .frame(height: 60)
                 .cornerRadius(20)
                 .padding(.top)
             }

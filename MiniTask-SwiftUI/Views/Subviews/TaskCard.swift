@@ -41,25 +41,28 @@ struct TaskCard: View {
                         Spacer()
                         
                     }
-                    HStack() {
-                        if(taskDate != nil){
-                            cText(text: taskDate!, size: 12, weight: "light")
-                                .if(isChecked) { View in
-                                    View.strikethrough()
-                                }
+                    if(taskDate != nil && taskTime != nil){
+                        HStack() {
+                            if(taskDate != nil){
+                                cText(text: taskDate!, size: 12, weight: "light")
+                                    .if(isChecked) { View in
+                                        View.strikethrough()
+                                    }
+                            }
+                            if(taskTime != nil){
+                                cText(text: taskTime!, size: 12, weight: "light")
+                                    .if(isChecked) { View in
+                                        View.strikethrough()
+                                    }
+                            }
+    //                        cText(text: category, size: 12, weight: "light")
+    //                            .if(isChecked) { View in
+    //                                View.strikethrough()
+    //                            }
+                            Spacer()
                         }
-                        if(taskTime != nil){
-                            cText(text: taskTime!, size: 12, weight: "light")
-                                .if(isChecked) { View in
-                                    View.strikethrough()
-                                }
-                        }
-//                        cText(text: category, size: 12, weight: "light")
-//                            .if(isChecked) { View in
-//                                View.strikethrough()
-//                            }
-                        Spacer()
                     }
+                    
                 }
                 Spacer()
             }
@@ -68,13 +71,13 @@ struct TaskCard: View {
         }
         .frame(height: 80)
         .cornerRadius(20)
-        .padding(.bottom, 3)
+        .padding(.top, 4)
     }
 }
 
 #Preview {
-    TaskCard(task: "Update MiniTask Design Update MiniTask Design Update MiniTask Design Update MiniTask Design Update MiniTask Design Update MiniTask Design ",
-             taskDate: "Mar 06, 2024",
-             taskTime: "08:00am - 09:00am",
+    TaskCard(task: "Update MiniTask  ",
+             taskDate: "Mar 15, 2023",
+             taskTime: "06:05 am",
              isChecked: false)
 }
