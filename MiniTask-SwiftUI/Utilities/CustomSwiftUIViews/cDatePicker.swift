@@ -43,41 +43,45 @@ struct cDatePicker: View {
     @Binding var isValueSelected: Bool
     
     var body: some View {
-        VStack(alignment: .center) {
-            HStack {
-                cText(text: "Select Date", size: 20, weight: "bold")
-                Spacer()
-                Button {
-                    isValueSelected = false
-                    dismiss()
-                } label: {
-                    Image(systemName: "xmark.circle")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 20, height: 20)
-                        .foregroundColor(Color(UIColor.placeholderText))
+        ZStack {
+            Color("background")
+                .ignoresSafeArea()
+            VStack(alignment: .center) {
+                HStack {
+                    cText(text: "Select Date", size: 20, weight: "bold")
+                    Spacer()
+                    Button {
+                        isValueSelected = false
+                        dismiss()
+                    } label: {
+                        Image(systemName: "xmark.circle")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 20, height: 20)
+                            .foregroundColor(Color(UIColor.placeholderText))
+                    }
+                    
                 }
-                
+                .padding(.bottom, 30)
+                DatePicker("", selection: $selectDate, displayedComponents: [.date])
+                    .datePickerStyle(.graphical)
+                //Text("\(selectDate.formatted(date: .abbreviated, time: .shortened))")
+                Spacer()
+                cText(text: "\(selectDate.formatted(.dateTime.day().month().year()))", size: 18)
+                    .padding(.bottom)
+                ZStack{
+                    Color("lightGray")
+                    cText(text: "Confirm", size: 18)
+                }
+                .frame(height: 60)
+                .cornerRadius(20)
+                .onTapGesture {
+                    isValueSelected = true
+                    dismiss()
+                }
             }
-            .padding(.bottom, 30)
-            DatePicker("", selection: $selectDate, displayedComponents: [.date])
-                .datePickerStyle(.graphical)
-            //Text("\(selectDate.formatted(date: .abbreviated, time: .shortened))")
-            Spacer()
-            cText(text: "\(selectDate.formatted(.dateTime.day().month().year()))", size: 18)
-                .padding(.bottom)
-            ZStack{
-                Color("lightGray")
-                cText(text: "Confirm", size: 18)
-            }
-            .frame(height: 50)
-            .cornerRadius(20)
-            .onTapGesture {
-                isValueSelected = true
-                dismiss()
-            }
+            .padding(.init(top: 30, leading: 30, bottom: 10, trailing: 30))
         }
-        .padding(.init(top: 30, leading: 30, bottom: 10, trailing: 30))
     }
 }
 
