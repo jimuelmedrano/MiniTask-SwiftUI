@@ -9,11 +9,34 @@
 import SwiftUI
 
 struct DarkModeToggle: View {
+    @AppStorage("isDarkMode") private var isDarkMode = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Capsule()
+                .frame(width:80,height:44)
+                .foregroundColor(Color(UIColor.systemFill))
+            ZStack{
+                Circle()
+                    .frame(width:40, height:40)
+                    .foregroundColor(.white)
+                Image(systemName: isDarkMode ? "moon.fill" : "sun.max")
+                    .foregroundColor(.black)
+            }
+            .shadow(color: .black.opacity(0.14), radius: 4, x: 0, y: 2)
+            .offset(x:isDarkMode ? 18 : -18)
+            .animation(.snappy)
+            .padding(24)
+        }
+        .onTapGesture {
+            self.isDarkMode.toggle()
+        }
+        .preferredColorScheme(isDarkMode ? .dark : .light)
+        .ignoresSafeArea(.all)
     }
+    
 }
 
 #Preview {
     DarkModeToggle()
 }
+
