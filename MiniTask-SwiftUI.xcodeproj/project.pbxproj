@@ -14,7 +14,6 @@
 		DE5B9DF92B971982003CC847 /* cText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B9DF82B971982003CC847 /* cText.swift */; };
 		DE862B252B99F87200B04542 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE862B242B99F87200B04542 /* CategoryCard.swift */; };
 		DE8F79D22B97613D00FA270D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F79D12B97613D00FA270D /* Color.swift */; };
-		DE9918A52BA325F3000EFD7E /* MaskTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9918A42BA325F3000EFD7E /* MaskTest.swift */; };
 		DEA2130E2BA09ABA0067DE2E /* cDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA2130D2BA09ABA0067DE2E /* cDatePicker.swift */; };
 		DEA213102BA09F3A0067DE2E /* cTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA2130F2BA09F3A0067DE2E /* cTimePicker.swift */; };
 		DEAAADA52B91FE39003C6B43 /* MiniTask_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAAADA42B91FE39003C6B43 /* MiniTask_SwiftUIApp.swift */; };
@@ -34,7 +33,6 @@
 		DE5B9DF82B971982003CC847 /* cText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cText.swift; sourceTree = "<group>"; };
 		DE862B242B99F87200B04542 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		DE8F79D12B97613D00FA270D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		DE9918A42BA325F3000EFD7E /* MaskTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskTest.swift; sourceTree = "<group>"; };
 		DEA2130D2BA09ABA0067DE2E /* cDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cDatePicker.swift; sourceTree = "<group>"; };
 		DEA2130F2BA09F3A0067DE2E /* cTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cTimePicker.swift; sourceTree = "<group>"; };
 		DEAAADA12B91FE39003C6B43 /* MiniTask-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MiniTask-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,7 +138,6 @@
 				DEAAADA42B91FE39003C6B43 /* MiniTask_SwiftUIApp.swift */,
 				DEAAADA82B91FE3B003C6B43 /* Assets.xcassets */,
 				DEAAADAA2B91FE3B003C6B43 /* Preview Content */,
-				DE9918A42BA325F3000EFD7E /* MaskTest.swift */,
 			);
 			path = "MiniTask-SwiftUI";
 			sourceTree = "<group>";
@@ -237,7 +234,6 @@
 				DEAAADA72B91FE39003C6B43 /* HomeView.swift in Sources */,
 				DEA2130E2BA09ABA0067DE2E /* cDatePicker.swift in Sources */,
 				DE8F79D22B97613D00FA270D /* Color.swift in Sources */,
-				DE9918A52BA325F3000EFD7E /* MaskTest.swift in Sources */,
 				DE45AE1E2B9F40C000577BEA /* CategoryModel.swift in Sources */,
 				DE4E3D012B9B5752008C3395 /* AddTaskView.swift in Sources */,
 				DE862B252B99F87200B04542 /* CategoryCard.swift in Sources */,
