@@ -13,6 +13,8 @@ struct AddTaskView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State var taskInputText = ""
+    @State var categorySelection = ""
+    @State var repeatSelection = "Do Not Repeat"
     var categoryOptions = ["Work", "Home", "School", "Shopping", "Personal"]
     var repeatOptions = ["Do Not Repeat", "Everyday", "Weekends", "Weekdays", "Every Other Day"]
     @State private var date = Date()
@@ -55,7 +57,7 @@ struct AddTaskView: View {
                     .padding(.bottom, 10)
                 ZStack(alignment: .leading){
                     Color("lightGray")
-                    cMenuPicker(pickerName: "Category", options: categoryOptions)
+                    cMenuPicker(selection: $categorySelection, pickerName: "Category", options: categoryOptions)
                         .padding(.horizontal, 5)
                 }
                 .frame(height: 50)
@@ -125,12 +127,13 @@ struct AddTaskView: View {
                     .padding(.bottom, 10)
                 ZStack(alignment: .leading){
                     Color("lightGray")
-                    cMenuPicker(selection: "Do Not Repeat", pickerName: "Repeat Option", options: repeatOptions)
+                    cMenuPicker(selection: $repeatSelection, pickerName: "Repeat Option", options: repeatOptions)
                         .padding(.horizontal, 5)
                 }
                 .frame(height: 50)
                 .cornerRadius(15)
                 Spacer()
+                //MARK: - Confirm Button
                 ZStack{
                     Color("foreground")
                     cText(text: "Create new task", size: 18, weight: "bold")

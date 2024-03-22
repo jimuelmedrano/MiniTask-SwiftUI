@@ -12,6 +12,8 @@
 		DE4E3D012B9B5752008C3395 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E3D002B9B5752008C3395 /* AddTaskView.swift */; };
 		DE5B9DF12B970EE1003CC847 /* Comfortaa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5B9DF02B970EE1003CC847 /* Comfortaa.ttf */; };
 		DE5B9DF92B971982003CC847 /* cText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B9DF82B971982003CC847 /* cText.swift */; };
+		DE7023A62BA9C21B009FE9AA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7023A52BA9C21B009FE9AA /* SettingsView.swift */; };
+		DE7023AA2BA9DA3B009FE9AA /* DarkModeToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7023A92BA9DA3B009FE9AA /* DarkModeToggle.swift */; };
 		DE862B252B99F87200B04542 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE862B242B99F87200B04542 /* CategoryCard.swift */; };
 		DE8F79D22B97613D00FA270D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F79D12B97613D00FA270D /* Color.swift */; };
 		DEA2130E2BA09ABA0067DE2E /* cDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA2130D2BA09ABA0067DE2E /* cDatePicker.swift */; };
@@ -31,6 +33,8 @@
 		DE5B9DF02B970EE1003CC847 /* Comfortaa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa.ttf; sourceTree = "<group>"; };
 		DE5B9DF22B970F49003CC847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DE5B9DF82B971982003CC847 /* cText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cText.swift; sourceTree = "<group>"; };
+		DE7023A52BA9C21B009FE9AA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DE7023A92BA9DA3B009FE9AA /* DarkModeToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeToggle.swift; sourceTree = "<group>"; };
 		DE862B242B99F87200B04542 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		DE8F79D12B97613D00FA270D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DEA2130D2BA09ABA0067DE2E /* cDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cDatePicker.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				DE8A12B22B98A592002ABD93 /* Subviews */,
 				DE4E3D002B9B5752008C3395 /* AddTaskView.swift */,
 				DEAAADA62B91FE39003C6B43 /* HomeView.swift */,
+				DE7023A52BA9C21B009FE9AA /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			children = (
 				DEFA1D2A2B99F4A500D13261 /* TaskCard.swift */,
 				DE862B242B99F87200B04542 /* CategoryCard.swift */,
+				DE7023A92BA9DA3B009FE9AA /* DarkModeToggle.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -242,6 +248,8 @@
 				DE5B9DF92B971982003CC847 /* cText.swift in Sources */,
 				DE45AE1B2B9F31C300577BEA /* cMenuPicker.swift in Sources */,
 				DEFA1D292B99EBB300D13261 /* ViewExtensions.swift in Sources */,
+				DE7023A62BA9C21B009FE9AA /* SettingsView.swift in Sources */,
+				DE7023AA2BA9DA3B009FE9AA /* DarkModeToggle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

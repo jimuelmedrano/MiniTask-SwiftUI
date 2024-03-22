@@ -25,12 +25,16 @@ struct HomeView: View {
                             .onTapGesture {
                                 print("Search tapped!")
                             }
-                        Image(systemName: "gearshape")
-                            .resizable()
-                            .frame(width: 25.0, height: 25.0)
-                            .onTapGesture {
-                                print("settings tapped!")
-                            }
+                        NavigationLink {
+                            // destination view to navigation to
+                            SettingsView()
+                        } label: {
+                            Image(systemName: "gearshape")
+                                .resizable()
+                                .frame(width: 25.0, height: 25.0)
+                                .foregroundColor(Color(UIColor.label))
+                        }
+                        
                     }
                     .padding(.bottom, 30)
                     VStack(alignment: .leading){
@@ -114,7 +118,6 @@ struct HomeView: View {
                 .padding(.init(top: 30, leading: 30, bottom: 10, trailing: 30))
             }
         }
-        
     }
 }
 
